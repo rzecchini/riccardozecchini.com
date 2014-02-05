@@ -322,7 +322,17 @@ a:visited {
         .projects-nav-link:nth-last-child(1){
             margin-bottom: 0;        
         }
-
+    
+    .projects-previews {
+        position: fixed;
+        top: 30%;
+        left: 12%;
+    }
+        .prj-preview {
+            position: absolute;
+            top: 7em;
+            left: 0;
+        }
 }
 
 @media screen and (min-width: 72em) {

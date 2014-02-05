@@ -24,6 +24,13 @@ $("a").click(function () {
 
 
 
+//prj previews
+$("#sansavenir-link").hover(function () {
+    $("#preview-sansavenir").toggleShow();
+})
+
+
+
 //fit vids for responsive videos
 $(".video-container").fitVids();
         
