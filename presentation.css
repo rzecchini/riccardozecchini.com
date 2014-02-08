@@ -394,24 +394,19 @@ a:visited {
         position: fixed;
         background: rgba(255,255,255,.9);
         border-bottom: 1px solid #f9f9f9;
-/*
-        -webkit-transition: -webkit-transform .3s, height .3s, background .4s, opacity .3s;
-        -moz-transition: -moz-transform .3s, height .3s, background .4s, opacity .3s;
-        -o-transition: -o-transform .3s, height .3s, background .4s, opacity .3s;
-        transition: transform .3s, height .3s, background .4s, opacity .3s;
-*/
     }
+    
     .invisible {
         -webkit-transform: translate(0, -104px);
         -moz-transform: translate(0, -104px);
         -o-transform: translate(0, -104px);
         transform: translate(0, -104px);
-/*
+
         -webkit-transition: -webkit-transform .2s;
         -moz-transition: -moz-transform .2s;
         -o-transition: -o-transform .2s;
         transition: transform .2s;
-*/
+
         opacity: 0;
     }
 }
