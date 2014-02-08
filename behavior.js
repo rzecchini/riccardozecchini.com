@@ -20,7 +20,7 @@ $(".video-container").fitVids();
 var previousScroll = 0, // previous scroll position
     menuOffset = 104, // height of menu (once scroll passed it, menu is hidden)
     detachPoint = 800, // point of detach (after scroll passed it, menu is fixed)
-    hideShowOffset = 18; // scrolling value after which triggers hide/show menu
+    hideShowOffset = 60; // scrolling value after which triggers hide/show menu
 
 // on scroll hide/show menu
 $(window).scroll(function () {
@@ -35,18 +35,19 @@ $(window).scroll(function () {
                     $(".site-header").addClass("detached");
             }
     
-            // if scrolling faster than hideShowOffset hide/show menu
-            if (scrollDifference >= hideShowOffset) {
+            // hide/show menu
                 if (currentScroll > previousScroll) {
                     // scrolling down; hide menu
                     if (!$(".site-header").hasClass("invisible"))
                         $(".site-header").addClass("invisible");
                 } else {
-                    // scrolling up; show menu
-                    if ($(".site-header").hasClass("invisible"))
-                        $(".site-header").removeClass("invisible");
+                    // if scrolling faster than hideShowOffset
+                    if (scrollDifference >= hideShowOffset) {
+                        // scrolling up; show menu
+                        if ($(".site-header").hasClass("invisible"))
+                            $(".site-header").removeClass("invisible");
+                    }
                 }
-            }
         } else {
             // only remove “detached” class if user is at the top of document (menu jump fix)
             if (currentScroll <= 0) {
