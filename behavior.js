@@ -4,18 +4,6 @@ $(".intro-img").css("position","fixed");
 //unveil imgs
 $("img").unveil(400);
 
-//animate anchor links
-var $root = $("html, body");
-$("a").click(function () {
-    var href = $.attr(this, "href");
-    $root.animate({
-        scrollTop: ($(href).offset().top) - 100
-    }, 500, function () {
-        window.location.hash = href;
-    });
-    return false;
-});
-
 //fit vids for responsive videos
 $(".video-container").fitVids();
 
@@ -25,6 +13,18 @@ var previousScroll = 0, // previous scroll position
     detachPoint = 800, // point of detach (after scroll passed it, menu is fixed)
     hideShowOffset = 60; // scrolling value after which triggers hide/show menu
 
+//animate anchor links
+var $root = $("html, body");
+$("a").click(function () {
+    var href = $.attr(this, "href");
+    $root.animate({
+        scrollTop: ($(href).offset().top) - menuOffset
+    }, 500, function () {
+        window.location.hash = href;
+    });
+    return false;
+});
+
 // on scroll hide/show menu, assign active to current prj, sticky intro-img
 $(window).scroll(function () {
     var currentScroll = $(this).scrollTop(), // gets current scroll position
@@ -32,7 +32,7 @@ $(window).scroll(function () {
     
     // assign active to current prj
     $('.single-project').each(function(i) {
-        if ($(this).position().top <= currentScroll) {
+        if ($(this).position().top <= (currentScroll + (menuOffset+20))) {
             $('.projects-nav-link.active').removeClass('active');
             $('.projects-nav-link').eq(i).addClass('active');
        }
@@ -99,7 +99,7 @@ $(window).scroll(function () {
 var prjNum = 1;
 
 $(".project-title").each( function (){
-    $(this).prepend(prjNum);
+    $(this).prepend('<span class="prj-num">' + prjNum + '</span>');
     prjNum += 1;
 });
 

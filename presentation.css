@@ -96,17 +96,11 @@ a {
 }
 
 a:hover {
-    color: #5B3930; 
+    color: #236E59; 
 }
-
-/*
-a:visited {
-    color: yellow; #E75017
-}
-*/
 
 .active {
-    color: #5B3930;
+    color: #236E59;
 }
 
 /*------------------*\
@@ -172,6 +166,11 @@ a:visited {
     margin: 0 1% .75em;
 }
 
+.archive-number {
+    margin-left: .5em;
+    color: #236E59;
+}
+
 .hello{
     margin: 1em 0;
     font-size: 1.5em;
@@ -179,6 +178,12 @@ a:visited {
 
 .single-project {
     margin: 2.5em 0;
+}
+
+.prj-num {
+    margin-right: .5em;
+    color: #236E59;
+    font-weight: 300;
 }
 
 .project-title {
@@ -334,11 +339,20 @@ a:visited {
         left: 75%;
         margin: -65px 0 0 0;
         width: 200px;
-        opacity: 0;
+        display: none;
+    }
+    
+    .prj-preview img {
+        border: 1px solid #f9f9f9;
+    }
+    
+    .prj-preview-caption {
+        font-size: .888em;
+        text-transform: uppercase;
     }
     
 .projects-nav-link:hover + .prj-preview {
-        opacity: 1;
+        display: block;
     }
     
 }
