@@ -1,5 +1,3 @@
-@import url(http://fonts.googleapis.com/css?family=Open+Sans:300,600);
-
 /*------------------*\
     CONTENTS
 \*------------------*/
@@ -98,11 +96,11 @@ a {
 }
 
 a:hover {
-    color: #5B3930; 
+    color: #236E59; 
 }
 
-a:visited {
-    color: #E75017;
+.active {
+    color: #236E59;
 }
 
 /*------------------*\
@@ -168,6 +166,11 @@ a:visited {
     margin: 0 1% .75em;
 }
 
+.archive-number {
+    margin-left: .5em;
+    color: #236E59;
+}
+
 .hello{
     margin: 1em 0;
     font-size: 1.5em;
@@ -175,6 +178,12 @@ a:visited {
 
 .single-project {
     margin: 2.5em 0;
+}
+
+.prj-num {
+    margin-right: .5em;
+    color: #236E59;
+    font-weight: 300;
 }
 
 .project-title {
@@ -203,6 +212,10 @@ a:visited {
     background: url(img/picbg.png) center center no-repeat;
 }
 
+.projects-nav {
+    display: none;
+}
+
 @media screen and (min-width: 36em) {
     .hello {
         margin: 1em 0 2em;
@@ -222,7 +235,8 @@ a:visited {
     }
     
     .single-project {
-        margin: 3.875em 0;
+        padding: 2.25em 0;
+        margin: 0 auto;
     }
     
     .project-info-container {
@@ -268,7 +282,6 @@ a:visited {
         position: absolute;
         top: 0;
         left: 16.666666667%;
-        //margin-left: -50%;
         z-index: -1000;
     }
     
@@ -283,9 +296,11 @@ a:visited {
         -webkit-transform: translate(0, 0);
         -moz-transform: translate(0, 0);
         -o-transform: translate(0, 0);
+        -ms-transform: translate(0, 0);
         transform: translate(0, 0);
         -webkit-transition: -webkit-transform .4s, height .3s, background .4s;
         -moz-transition: -moz-transform .4s, height .3s, background .4s;
+        -o-transition: -moz-transform .4s, height .3s, background .4s;
         transition: transform .4s, height .3s, background .4s
     }
     
@@ -300,29 +315,46 @@ a:visited {
         width: 16.6666667%;
         margin-top: -9em;
         padding: 1.5em 0;
-        //background: rgba(255,255,255,.9);
         font-family: "Open Sans", sans-serif;
         font-weight: 600;
-        //display: block;
+        display: block;
     }
          .projects-nav-list {
             text-align: center;
-        }   
+            position: relative;
+
+    }   
         
-        .projects-nav-list li {
-            margin: .5em 0;
-        }
-        
-        .projects-nav-link{
-            //margin: .5em 0;        
+        .projects-nav-link{ 
+            width: 15%;
+            padding: .25em 0;
+            margin: 0 auto;
             border-bottom: none;
-            //display: block;
+            display: block;
         }
-
-        .projects-nav-link:nth-last-child(1){
-            margin-bottom: 0;        
-        }
-
+    
+    .prj-preview {
+        position: absolute;
+        top: 50%;
+        left: 75%;
+        margin: -65px 0 0 0;
+        width: 200px;
+        display: none;
+    }
+    
+    .prj-preview img {
+        border: 1px solid #f9f9f9;
+    }
+    
+    .prj-preview-caption {
+        font-size: .888em;
+        text-transform: uppercase;
+    }
+    
+.projects-nav-link:hover + .prj-preview {
+        display: block;
+    }
+    
 }
 
 @media screen and (min-width: 72em) {
@@ -352,25 +384,23 @@ a:visited {
 
     .detached {
         position: fixed;
-        background: rgba(255,255,255,.5);
-/*
-        -webkit-transition: -webkit-transform .3s, height .3s, background .4s, opacity .3s;
-        -moz-transition: -moz-transform .3s, height .3s, background .4s, opacity .3s;
-        -o-transition: -o-transform .3s, height .3s, background .4s, opacity .3s;
-        transition: transform .3s, height .3s, background .4s, opacity .3s;
-*/
+        background: #fff;
+        background: rgba(255,255,255,.9);
+        border-bottom: 1px solid #f9f9f9;
     }
+    
     .invisible {
-        -webkit-transform: translate(0, -102px);
-        -moz-transform: translate(0, -102px);
-        -o-transform: translate(0, -102px);
-        transform: translate(0, -102px);
-/*
+        -webkit-transform: translate(0, -104px);
+        -moz-transform: translate(0, -104px);
+        -o-transform: translate(0, -104px);
+        -ms-transform: translate(0, -104px);
+        transform: translate(0, -104px);
+
         -webkit-transition: -webkit-transform .2s;
         -moz-transition: -moz-transform .2s;
         -o-transition: -o-transform .2s;
         transition: transform .2s;
-*/
+
         opacity: 0;
     }
 }
