@@ -4,26 +4,32 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
     <title>Riccardo Zecchini - Designer, passionate about mountains</title>
-    <meta name="description" content="Riccardo Zecchini is a multidisciplinary designer with a passion for the web and new technologies. In his spare time he loves going climbing and exploring the mountains.">
+    <meta name="description" content="Riccardo Zecchini is a multi-disciplinary designer with a passion for the web and new technologies. In his spare time he loves going climbing and exploring the mountains.">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href='http://fonts.googleapis.com/css?family=Open+Sans:300,600' rel='stylesheet' type='text/css'>
-    <link href="present.css" rel="stylesheet">
+    <link href="present.min.css" rel="stylesheet">
 
     <script type="text/javascript">
-        var imageURLs = [
+            if ( !("ontouchstart" in document.documentElement) ) {
+                document.documentElement.className += "no-touch";
+                
+                var imageURLs = [
                        "img/riccardo_zecchini_intro_photo_01.jpg",
                        "img/riccardo_zecchini_intro_photo_02.jpg",
                        "img/riccardo_zecchini_intro_photo_03.jpg",
                        "img/riccardo_zecchini_intro_photo_04.jpg"
                    ];
-            function getImageTag() {
-                    var img = '<img width=\"960px\"/ height=\"640px\"/ src=\"';
+                function getImageTag() {
+                    var img = '<img width=\"720px\"/ height=\"480px\"/ src=\"';
                     var randomIndex = Math.floor(Math.random() * imageURLs.length);
                     img += imageURLs[randomIndex];
                     img += '\" alt=\"Riccardo Zecchini passionate about mountains, photography\"/>';
                     return img;
                 }
+            }
     </script>
 </head>
 
@@ -95,30 +101,25 @@
                         <h1 class="project-title">
                             Betfect App
                         </h1>
-                        <p class="project-descr">- - -</p>
+                        <p class="project-descr">iOS App for Betfect, an emerging social betting service. The app allows to bet with different providers and to find out how people are taking forward their stakes.</p>
                     </div>
                     <div class="project-info-second">
                         <ul>
                             <li class="prj-year">2014</li>
+                            <li class="prj-where">Betfect</li>
                             <li class="prj-with">with Giorgio Fanecco</li>
                         </ul>
                     </div>
                 </header>
                 <div class="project-imgs">
                     <figure>
-                        <img src="img/png640.png" data-src="img/riccardo_zecchini_sutnar_01.jpg" width="960px" height="661px" alt="">
+                        <img src="img/png600.png" data-src="img/betfect/riccardo_zecchini_betfect_01.jpg" width="960px" height="600px" alt="Development of iOS App Betfect, screenshot of design phase">
                     </figure>
                     <figure>
-                        <img src="img/png640.png" data-src="img/riccardo_zecchini_sutnar_02.jpg" width="960px" height="658px" alt="">
+                        <img src="img/png600.png" data-src="img/betfect/riccardo_zecchini_betfect_02.gif" width="960px" height="600px" alt="Development of iOS App Betfect, early prototype for betslip">
                     </figure>
                     <figure>
-                        <img src="img/png640.png" data-src="img/riccardo_zecchini_sutnar_03.jpg" width="960px" height="666px" alt="">
-                    </figure>
-                    <figure>
-                        <img src="img/png650.png" data-src="img/riccardo_zecchini_sutnar_04.jpg" width="960px" height="652px" alt="">
-                    </figure>
-                    <figure>
-                        <img src="img/png650.png" data-src="img/riccardo_zecchini_sutnar_05.jpg" width="960px" height="651px" alt="">
+                        <img src="img/png600.png" data-src="img/betfect/riccardo_zecchini_betfect_03.jpg" width="960px" height="600px" alt="Development of iOS App Betfect, screenshot of notifications, profile, football">
                     </figure>
                 </div>
             </article>
@@ -129,7 +130,7 @@
                         <h1 class="project-title">
                             Nice to meet you
                         </h1>
-                        <p class="project-descr">Representation of data I collected about people who work at Fabrica – the so called Fabricanti. The visualization is split in two parts: on one side each person is represented by a green box, positioned according to its provenience and with an intensity based on the duration of its stay. On the other side there is a map view with a comparison between where people come from and where they are living now. <br><a href="http://riccardozecchini.com/nice-to-meet-you/">See it live</a></p>
+                        <p class="project-descr">Representation of data I collected about people who work at Fabrica – the so-called Fabricanti. The visualization is split into two parts: on one side each person is represented by a green box, positioned according to its provenience and with an intensity based on the duration of its stay. On the other side there is a map view with a comparison between where people come from and where they are living now. <a href="http://riccardozecchini.com/nice-to-meet-you/">See it live</a></p>
                     </div>
                     <div class="project-info-second">
                         <ul>
@@ -149,7 +150,7 @@
                         <img src="img/png640.png" data-src="img/nice_to_meet/riccardo_zecchini_nice_to_05.jpg" width="960px" height="640px" alt="Riccardo Zecchini, Fabrica trial project, web data visualization fabricanti network">
                     </figure>
                     <div class="video-container">
-                        <iframe src="//player.vimeo.com/video/86644109?title=0&amp;byline=0&amp;portrait=0&amp;color=e75017&amp;autoplay=1&amp;loop=1" width="960" height="540" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+                        <iframe src="//player.vimeo.com/video/86644109?title=0&amp;byline=0&amp;portrait=0&amp;color=e75017&amp;" width="960" height="540" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
                     </div>
                 </div>
             </article>
@@ -160,7 +161,7 @@
                         <h1 class="project-title">
                             Sansavenir
                         </h1>
-                        <p class="project-descr">This book illustrates the critical story of Ilva Taranto. A notable italian steel plant. The work is built around pictures shot by Pierangelo Laterza, manipulated and distorted to represent the actual conditions. This images are matched with some utopian documents from the Sixties and with contemporary data about the steel plant's production and the pollution.</p>
+                        <p class="project-descr">This book illustrates the critical situation of Ilva Taranto, a notable italian steel plant. The project is built around pictures shot by Pierangelo Laterza, manipulated and distorted to represent the actual conditions of the city. This images are matched with some utopian documents from the Sixties and with contemporary data about the steel plant production and the pollution it provoked.</p>
                     </div>
                     <div class="project-info-second">
                         <ul>
@@ -205,11 +206,12 @@
                         <h1 class="project-title">
                             Satispay App
                         </h1>
-                        <p class="project-descr">Prototype for a mobile-payment App. Satispay is a service to easily transfer money with a mobile device between people or when go shopping. The App gives you the possibility to send money and track your expenses with ease. Soon available.</p>
+                        <p class="project-descr">Prototype for the Satispay mobile-payment App. Satispay is a service that allows to easily transfer money with a mobile device between people or in customer-seller transactions. The App gives you the possibility to send money and to track your expenses with ease. Soon available.</p>
                     </div>
                     <div class="project-info-second">
                         <ul>
                             <li class="prj-year">2013</li>
+                            <li class="prj-where">Satispay</li>
                             <li class="prj-with">with M.Bozzi, G.Cescobolla, G.Sandrone</li>
                         </ul>
                     </div>
@@ -236,7 +238,7 @@
                         <h1 class="project-title">
                             Atlas of Public Urbino
                         </h1>
-                        <p class="project-descr">“Master students of ISIA made in a one week workshop under my guidance an atlas of the public spaces of Urbino. All the information collected by the students is translated into a graphic information system. Indexes and the chosen graphic language allow the reader to make links, allow him to get out of this book his own story, his own rendition of what public space is nowadays in an Italian city like Urbino” –Joost Grootens</p>
+                        <p class="project-descr">An atlas of the public spaces of Urbino made up from different projects. I curated the overall design and architecture, focusing on the data gained from the contributors. Indexes and chapters are introduced by a visual representation of the relationships between the members of each group and the urban space in which they live in.</p>
                     </div>
                     <div class="project-info-second">
                         <ul>
@@ -278,7 +280,7 @@
                         <h1 class="project-title">
                             Io questo sogno lo vorrei raccontare
                         </h1>
-                        <p class="project-descr">I want to tell this dream of mine: an automated reportage to capture my nights and my movements. Made with a light controller and an intervalometer with long exposures. The project presents eight series of the most significant shots captured during the year, matched with all the relative data of that particular night session.<br><a href="http://riccardozecchini.com/io-questo-sogno/">Look at the entire series.</a></p>
+                        <p class="project-descr">I want to tell this dream of mine: an automated reportage to capture my nights and my movements. Made with a light controller and an intervalometer with long exposures, the project presents eight series of the most significant shots captured during a year, matched with all the relative data of that particular night session. <a href="http://riccardozecchini.com/io-questo-sogno/">Look at the entire series.</a></p>
                     </div>
                     <div class="project-info-second">
                         <ul>
@@ -302,7 +304,7 @@
                         <img src="img/png640.png" data-src="img/io_questo_sogno/riccardo_zecchini_sogni_04.jpg" width="960px" height="640px" alt="Riccardo Zecchini questo sogno lo vorrei raccontare project, ISIA Simone Casetta, dream of mine, automated reportage">
                     </figure>
                     <div class="video-container">
-                        <iframe src="//player.vimeo.com/video/86634676?title=0&amp;byline=0&amp;portrait=0&amp;color=e75017&amp;autoplay=1&amp;loop=1" width="960" height="540" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+                        <iframe src="//player.vimeo.com/video/86634676?title=0&amp;byline=0&amp;portrait=0&amp;color=e75017&amp;" width="960" height="540" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
                     </div>
                 </div>
             </article>
@@ -313,7 +315,7 @@
                         <h1 class="project-title">
                             CSAC 1971–1980
                         </h1>
-                        <p class="project-descr">A book to tell a story about the CSAC Archive, Italy. This work is focused on the photographic exhibitions between 1971 and 1980 and it underlines the most important aspect of the exposed work: its dimension. The book is split in two parts: one showing the photos of the exhibitions in their original size through close-ups, another presenting the same photos as they were presented in the archive folders, with all their classification data.</p>
+                        <p class="project-descr">A book about the history of CSAC Archive, Italy. This work is focused upon the photographic exhibitions between 1971 and 1980 and it underlines the most important aspect of the exposed work: its dimensions. The book is split into two parts, the first one showing the photos of the exhibitions in their original size through close-ups, another one presenting the same photos as they were presented in the archive folders, with all their classification data.</p>
                     </div>
                     <div class="project-info-second">
                         <ul>
@@ -352,7 +354,7 @@
                         <h1 class="project-title">
                             It's not always easy to get in
                         </h1>
-                        <p class="project-descr">A documentation of the hard conditions in which people was forced to live in during the huge snow storm in Urbino. A photographic reportage and a website showing my pictures, where everyone was able to upload its own photos of the impressive storm. <a href="http://riccardozecchini.com/urbino-naetgi/">Visit the website.</a></p>
+                        <p class="project-descr">A documentation of the hard conditions in which people was forced to live in during the 2012 huge snow storm in Urbino. A photographic reportage and a website showing my pictures, where everyone was able to upload its own photos of the impressive storm. <a href="http://riccardozecchini.com/urbino-naetgi/">Visit the website.</a></p>
                     </div>
                     <div class="project-info-second">
                         <ul>
@@ -372,7 +374,7 @@
                         <img src="img/png640.png" data-src="img/naetgi/riccardo_zecchini_naetgi_03.jpg" width="960px" height="640px" alt="Riccardo Zecchini, Urbino project, snow, web design, porte">
                     </figure>
                     <div class="video-container">
-                        <iframe src="//player.vimeo.com/video/86632565?title=0&amp;byline=0&amp;portrait=0&amp;color=e75017&amp;autoplay=1&amp;loop=1" width="960" height="540" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+                        <iframe src="//player.vimeo.com/video/86632565?title=0&amp;byline=0&amp;portrait=0&amp;color=e75017&amp;" width="960" height="540" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
                     </div>
                 </div>
             </article>
@@ -383,7 +385,7 @@
                         <h1 class="project-title">
                             Pesaro e Urbino map
                         </h1>
-                        <p class="project-descr">Concept of a map showing the connections between publishing industries within the province of Pesaro e Urbino. The map shows every location of each single production site, together with roads, transportations and traveling time. In opening the leaflet it is possible to see the morphology of the territory and the comparison of traveling times.</p>
+                        <p class="project-descr">Concept of a map showing the connections between publishing industries within the province of Pesaro e Urbino. The map shows every location of each single production site, together with roads, transportations and traveling time. In opening the leaflet it is possible to see the morphology of the territory and the comparison between traveling times.</p>
                     </div>
                     <div class="project-info-second">
                         <ul>
@@ -496,7 +498,7 @@
 
     <script src="http://code.jquery.com/jquery-1.10.0.min.js"></script>
     <script src="lib.js"></script>
-    <script src="behave.js"></script>
+    <script src="behave.min.js"></script>
 
 </body>
 
