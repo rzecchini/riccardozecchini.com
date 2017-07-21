@@ -1,0 +1,209 @@
+@include font-face(QuestaGrande, "../font/2-Questa_Grande_Regular-webfont");
+
+@include font-face(QuestaSans, "../font/2-Questa_Sans_Regular-webfont");
+
+@include font-face(Questa, "../font/2-Questa_Regular-webfont");
+
+$grande: "QuestaGrande", "Questa", "Georgia", "Times New Roman", serif;
+$sans: "QuestaSans", "Lucida Grande", "Arial", sans-serif;
+$serif: "Questa", "Georgia", "Times New Roman", serif;
+
+a {
+  padding-bottom: 2px;
+  text-decoration: none;
+  border-bottom: 1px solid;
+  color: $accent;
+  &:visited, &:active {
+    color: $accent;
+  }
+  &:hover {
+    color: lighten($accent, 8);
+  }
+  @include transition(all 0.2s ease-in-out);
+}
+
+.secondary {
+  color: lighten($bl, 50);
+}
+
+.arrow {
+  color: $accent;
+}
+
+body {
+  font: normal 1em/1.5 "QuestaSans", "Lucida Grande", "Arial", sans-serif;
+  color: $bl;
+  @include screen(medium) {
+    //font-size: 1.25em;
+  }
+}
+
+.nav {
+  font-size: 1em;
+  text-transform: uppercase;
+  a {
+    border-bottom: none;
+ 
+  }
+}
+
+.nav__work {
+  text-align: center;
+}
+
+.index-page {
+  .nav__profile {
+    text-align: left;
+  }
+  .nav__work {
+    text-align: center;
+  }
+}
+
+.profile-page {
+  color: $wh;
+  .nav__profile {
+    text-align: center;
+  }
+  .nav__work {
+    text-align: right;
+  }
+}
+
+.nav__profile,
+.nav__work {
+  color: darken($main, 20);
+}
+
+.gintouch {
+  color: $secondary;
+  font-family: $serif;
+}
+
+// ME
+
+.me__profession {
+  line-height: 1.2;
+  font-family: $grande;
+  font-size: modular-scale(2);
+  text-align: center;
+  @include screen(large) {
+    font-size: modular-scale(3);
+  }
+}
+
+.me__introduce {
+  text-align: center;
+  //font-size: 1em;
+  color: $wh;
+}
+
+// Project List INDEX
+
+.project-list {
+  a {
+    //border-bottom: none;
+ 
+  }
+}
+
+.project__title {
+  text-align: center;
+  //text-transform: uppercase;
+}
+
+.project__type {
+  text-align: center;
+  color: $wh;
+}
+
+// Project Content
+
+.project-content {
+  font-family: $serif;
+  p {
+    font-size: modular-scale(1);
+    @include screen(large) {
+      font-size: modular-scale(1);
+    }
+  }
+  figcaption {
+    color: lighten($bl, 40);
+    font-family: $sans;
+  }
+}
+
+.pc__title {
+  color: $wh;
+  line-height: 1.2;
+  font-size: modular-scale(2);
+  font-family: $grande;
+  text-align: center;
+  @include screen(large) {
+    font-size: modular-scale(3);
+  }
+}
+
+.pc__tags {
+  color: $wh;
+  text-align: center;
+  //text-transform: uppercase;
+  font-size: modular-scale(-1);
+  font-family: $sans;
+}
+
+.project-nav {
+  font-size: 1em;
+  font-family: $sans;
+  //text-transform: uppercase;
+  a {
+    //border-bottom: none;
+ 
+  }
+}
+
+.pn__prev,
+.pn__all,
+.pn__next {
+  text-align: center;
+}
+
+.pn--t__title {
+  margin-top: .5em;
+  //text-transform: uppercase;
+  font-size: .75em;
+  text-align: center;
+}
+
+.pnav--l, .pnav--r {
+  //font-size: 1em;
+  //text-transform: uppercase;
+  //border-bottom: none;
+}
+
+// Profile
+
+.profile-hello {
+  font-family: $serif;
+  text-align: center;
+  font-size: modular-scale(2);
+}
+
+.profile-about {
+  font-family: $serif;
+  font-size: modular-scale(1);
+  @include screen(large) {
+    font-size: modular-scale(1);
+  }
+}
+
+.profile-cv {
+  font-family: $sans;
+  font-size: modular-scale(-1);
+  text-align: center;
+  a {
+    //border-bottom: none;
+    //text-transform: uppercase;
+ 
+  }
+}

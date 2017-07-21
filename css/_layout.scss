@@ -1,0 +1,352 @@
+#instantclick-bar {
+  background: $accent;
+}
+
+// Scrollbar
+html {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+// Global
+
+.index-page {
+  padding-top: 6em;
+  background: $main;
+}
+
+.profile-page {
+  padding-top: 6em;
+  background: $main;
+}
+
+body {
+  background: $wh;
+}
+
+.container {
+  overflow: hidden;
+  margin: 0 1.5em;
+  @include screen(medium) {
+    margin: 0 4%;
+  }
+
+  @include screen(large) {
+    margin: 0 8%;
+  }
+
+  @include screen(big) {
+    margin: 0 auto;
+    max-width: 90%;
+  }
+}
+.nav-wrapp {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  @include transition(all, 0.3s, ease);
+}
+.nav {
+  width: 100%;
+  padding: modular-scale(1) 0;
+  margin: 0 auto;
+  overflow: hidden;
+  li {
+    float: left;
+    width: 33.33333%;
+  }
+}
+
+.selected-word {
+  display: none;
+  @include screen(large) {
+    display: inline-block;
+  }
+}
+
+.me {
+  margin: modular-scale(4) 0;
+  @include screen(big) {
+    margin: modular-scale(5) 0 modular-scale(4);
+  }
+}
+
+.me__introduce {
+  margin-top: 1em;
+}
+
+// Nav IN PROFILE PAGE
+
+.profile-page {
+  .nav__profile {
+    margin-left: 33.33333%;
+  }
+}
+
+// Project List
+
+.project-list {
+  overflow: hidden;
+  margin-top: modular-scale(3);
+}
+
+.project {
+  padding-bottom: modular-scale(4);
+  img {
+    margin: auto;
+  }
+  &:nth-child(2n) {
+    @include screen(big) {
+      margin-right: 0;
+    }
+  }
+  @include screen(big) {
+    margin-right: 10%;
+    figure {
+      min-height: 480px;
+    }
+  }
+
+  @include screen(big) {
+    width: 45%;
+    float: left;
+  }
+}
+
+.project__title {
+  margin-top: modular-scale(1);
+}
+
+.project__type {
+  margin-top: .25em;
+}
+
+// Project Content
+
+.project-intro-wrapp {
+  padding-top: 6em;
+  background: $main;
+}
+
+.project-content {
+  padding: 1em 0;
+  @include screen(medium) {
+    padding: modular-scale(2) 0;
+  }
+  @include screen(big) {
+    padding: modular-scale(4) 0;
+  }
+
+  p, figure, .fig {
+    margin: modular-scale(1) auto;
+    @include screen(large) {
+      margin: modular-scale(1) auto;
+    }
+
+    @include screen(big) {
+      margin: modular-scale(2) auto;
+    }
+  }
+  figcaption {
+    margin-top: modular-scale(-1);
+    max-width: 20em;
+  }
+  figure {
+    max-width: 1000px;
+  }
+  p {
+    max-width: 22.5em;
+  }
+}
+
+.pc__title {
+  margin-bottom: .25em;
+}
+
+.pc__tags {
+  margin-bottom: modular-scale(3);
+  @include screen(large) {
+    margin-bottom: modular-scale(4);
+  }
+}
+
+.pc-fix {
+  @include screen(big) {
+    padding: 0 0 13em;
+  }
+}
+
+@include screen(big) {
+  .fig {
+    overflow: hidden;
+    max-width: 1000px;
+  }
+  .fig--left {
+    float: left;
+    width: 49%;
+    margin-right: 2%;
+  }
+  .fig--right {
+    float: right;
+    width: 49%;
+  }
+}
+
+@include keyframes(slideUp) {
+  from {
+    bottom: -10em;
+  }
+  to {
+    bottom: 0.5em;
+  }
+}
+
+.project-nav {
+  display: block;
+  position: fixed;
+  bottom: -10em;
+  left: .5em;
+  right: .5em;
+  padding: 1em 0;
+  margin: auto;
+  background: $wh;
+  border: 1px solid $secondary;
+  @include animation-name(slideUp);
+  @include animation-duration(0.4s);
+  @include animation-delay(1s);
+  @include animation-timing-function(ease-in-out);
+  @include animation-fill-mode(forwards);
+  @include screen(big) {
+    display: none;
+  }
+}
+
+.pn__prev,
+.pn__all,
+.pn__next {
+  float: left;
+  width: 33.3333333%;
+}
+
+.project-nav--thumbs {
+  display: none;
+  @include screen(big) {
+    display: block;
+    overflow: hidden;
+    padding: modular-scale(2);
+    position: fixed;
+    left: 0;
+    bottom: -400px;
+    right: 0;
+    background: $main;
+    li {
+      float: left;
+      width: 15%;
+      margin-right: 2%;
+      &:nth-child(6) {
+        margin-right: 0;
+      }
+    }
+    li.current {
+      opacity: .25;
+    }
+  }
+  @include transition(all 0.3s ease);
+}
+
+.pnav--l, .pnav--r {
+  display: none;
+  @include transition(all 0.4s linear);
+  @include screen(big) {
+    display: block;
+    opacity: 0;
+    position: fixed;
+    top: 50%;
+  }
+}
+
+.pnav--l {
+  left: 0;
+  @include transform(rotate(-90deg));
+  @include screen(huge) {
+    left: modular-scale(1);
+  }
+}
+
+.pnav--r {
+  right: 0;
+  @include transform(rotate(90deg));
+  @include screen(huge) {
+    right: modular-scale(1);
+  }
+}
+
+// Profile
+
+.profile {
+  padding: modular-scale(2) 0 0;
+}
+
+.profile-about {
+  margin-top: modular-scale(2);
+  p {
+    margin: modular-scale(1) auto;
+    max-width: 22.5em;
+  }
+}
+
+.profile-pic {
+  max-width: 1000px;
+  margin: 0 auto;
+  opacity: .9;
+  @include transition(all 0.2s ease-in-out);
+}
+
+.profile-cv {
+  padding: modular-scale(1) 0;
+}
+
+// Footer
+
+.footer {
+  padding: modular-scale(1) 0;
+  border-top: 1px solid $secondary;
+  overflow: hidden;
+  @include screen(large) {
+    margin-top: modular-scale(2);
+  }
+
+  @include screen(big) {
+    margin-top: modular-scale(4);
+    padding: modular-scale(3) 0 modular-scale(4);
+  }
+}
+
+.footer__col {
+  width: 30%;
+  margin-right: 5%;
+  float: left;
+  @include screen(big) {
+    width: 25%;
+    margin-right: 0;
+  }
+
+  li {
+    margin-bottom: .5em;
+  }
+}
+
+.footer__col:nth-child(1) {
+  @include screen(big) {
+    margin-left: 25%;
+  }
+}
+
+.footer__col:nth-child(3) {
+  margin-right: 0;
+}
+
+.gintouch {
+  padding-top: modular-scale(2);
+}
