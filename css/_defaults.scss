@@ -1,13 +1,12 @@
 // Colors
-$wh: #fff;
-$bl: #494754;
-$main: #B1BAC2;
-$accent: #007EF1;
-$secondary: lighten($main, 20);
+$bg: #fff;
+$color: #494754;
+$accent: #0070FF;
+$hover: darken($accent, 20);
+$secondary: lighten(adjust-color($accent, $alpha: -0.8), 20);
 
 // Scale
-$modular-scale-ratio: 1.5;
-$modular-scale-base: 1em;
+$scale: 1.618;
 
 // Rules
 *, *:before, *:after {
@@ -20,20 +19,6 @@ img {
   display: block;
   max-width: 100%;
   height: auto;
-}
-
-.detached {
-  position: fixed !important;
-  background: darken($wh,0);
-}
-
-.invisible {
-  -webkit-transform: translate(0, -200px);
-  -moz-transform: translate(0, -200px);
-  -o-transform: translate(0, -200px);
-  -ms-transform: translate(0, -200px);
-  transform: translate(0, -200px);
-  opacity: 0;
 }
 
 // Media q

@@ -7,20 +7,34 @@ html {
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
+/*body::-webkit-scrollbar {
+	width: 8px;
+}
+
+body::-webkit-scrollbar-track {
+	-webkit-border-radius: 0;
+	//-webkit-box-shadow: inset 0 0 1px rgba(0, 0, 0, 0.3);
+	background-color: $hover;
+}
+
+body::-webkit-scrollbar-thumb {
+	-webkit-border-radius: 0;
+	background-color: $accent;
+}*/
+
 // Global
 
 .index-page {
-  padding-top: 6em;
-  background: $main;
+  background: $hover;
 }
 
 .profile-page {
-  padding-top: 6em;
-  background: $main;
+  background: $hover;
+  color: $bg;
 }
 
 body {
-  background: $wh;
+  background: desaturate(lighten($hover, 68), 100);
 }
 
 .container {
@@ -39,22 +53,19 @@ body {
     max-width: 90%;
   }
 }
-.nav-wrapp {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  z-index: 1000;
-  @include transition(all, 0.3s, ease);
-}
+
 .nav {
   width: 100%;
-  padding: modular-scale(1) 0;
+  padding: golden-ratio(1em, 1) 0;
   margin: 0 auto;
   overflow: hidden;
+  @include screen(large) {
+    padding: golden-ratio(1em, 2) 0;
+  }
+
   li {
     float: left;
-    width: 33.33333%;
+    width: 35%;
   }
 }
 
@@ -66,9 +77,9 @@ body {
 }
 
 .me {
-  margin: modular-scale(4) 0;
+  margin: golden-ratio(1em, 4) 0;
   @include screen(big) {
-    margin: modular-scale(5) 0 modular-scale(4);
+    margin: golden-ratio(1em, 5) 0 golden-ratio(1em, 4);
   }
 }
 
@@ -80,21 +91,25 @@ body {
 
 .profile-page {
   .nav__profile {
-    margin-left: 33.33333%;
+    margin-left: 30%;
   }
 }
 
-// Project List
+//Project List
 
 .project-list {
   overflow: hidden;
-  margin-top: modular-scale(3);
+  margin-top: golden-ratio(1em, 3);
 }
 
 .project {
-  padding-bottom: modular-scale(4);
+  padding-bottom: golden-ratio(1em, 4);
   img {
     margin: auto;
+    @include transition(all 0.2s linear);
+    &:hover {
+      opacity: .4;
+    }
   }
   &:nth-child(2n) {
     @include screen(big) {
@@ -115,7 +130,7 @@ body {
 }
 
 .project__title {
-  margin-top: modular-scale(1);
+  margin-top: golden-ratio(1em, 1);
 }
 
 .project__type {
@@ -123,33 +138,31 @@ body {
 }
 
 // Project Content
-
 .project-intro-wrapp {
-  padding-top: 6em;
-  background: $main;
+  background: $hover;
 }
 
 .project-content {
   padding: 1em 0;
   @include screen(medium) {
-    padding: modular-scale(2) 0;
+    padding: golden-ratio(1em, 2) 0;
   }
   @include screen(big) {
-    padding: modular-scale(4) 0;
+    padding: golden-ratio(1em, 4) 0;
   }
 
   p, figure, .fig {
-    margin: modular-scale(1) auto;
+    margin: golden-ratio(0.75em, 1) auto;
     @include screen(large) {
-      margin: modular-scale(1) auto;
+      margin: golden-ratio(1em, 1) auto;
     }
 
     @include screen(big) {
-      margin: modular-scale(2) auto;
+      margin: golden-ratio(1em, 2) auto;
     }
   }
   figcaption {
-    margin-top: modular-scale(-1);
+    margin-top: golden-ratio(1em, -1);
     max-width: 20em;
   }
   figure {
@@ -165,9 +178,9 @@ body {
 }
 
 .pc__tags {
-  margin-bottom: modular-scale(3);
+  margin-bottom: golden-ratio(1em, 3);
   @include screen(large) {
-    margin-bottom: modular-scale(4);
+    margin-bottom: golden-ratio(1em, 4);
   }
 }
 
@@ -193,6 +206,7 @@ body {
   }
 }
 
+
 @include keyframes(slideUp) {
   from {
     bottom: -10em;
@@ -202,6 +216,7 @@ body {
   }
 }
 
+
 .project-nav {
   display: block;
   position: fixed;
@@ -210,7 +225,7 @@ body {
   right: .5em;
   padding: 1em 0;
   margin: auto;
-  background: $wh;
+  background: $bg;
   border: 1px solid $secondary;
   @include animation-name(slideUp);
   @include animation-duration(0.4s);
@@ -234,12 +249,12 @@ body {
   @include screen(big) {
     display: block;
     overflow: hidden;
-    padding: modular-scale(2);
+    padding: golden-ratio(1em, 2);
     position: fixed;
     left: 0;
-    bottom: -400px;
+    bottom: -1000px;
     right: 0;
-    background: $main;
+    background: $bg;
     li {
       float: left;
       width: 15%;
@@ -252,8 +267,18 @@ body {
       opacity: .25;
     }
   }
-  @include transition(all 0.3s ease);
 }
+
+//.pn--t__section {
+//	padding-top: modular-scale(1em, 2, $scale);
+//	margin-bottom: modular-scale(1em, 2, $scale);
+//}
+
+//.show {
+//	@include screen(huge) {
+//		opacity: 1 !important;
+//	}
+//}
 
 .pnav--l, .pnav--r {
   display: none;
@@ -270,7 +295,7 @@ body {
   left: 0;
   @include transform(rotate(-90deg));
   @include screen(huge) {
-    left: modular-scale(1);
+    left: golden-ratio(1em, 1);
   }
 }
 
@@ -278,20 +303,20 @@ body {
   right: 0;
   @include transform(rotate(90deg));
   @include screen(huge) {
-    right: modular-scale(1);
+    right: golden-ratio(1em, 1);
   }
 }
 
 // Profile
 
 .profile {
-  padding: modular-scale(2) 0 0;
+  padding: golden-ratio(1em, 2) 0 0;
 }
 
 .profile-about {
-  margin-top: modular-scale(2);
+  margin-top: golden-ratio(1em, 2);
   p {
-    margin: modular-scale(1) auto;
+    margin: golden-ratio(0.75em, 1) auto;
     max-width: 22.5em;
   }
 }
@@ -304,22 +329,22 @@ body {
 }
 
 .profile-cv {
-  padding: modular-scale(1) 0;
+  padding: golden-ratio(1em, 1) 0;
 }
 
 // Footer
 
 .footer {
-  padding: modular-scale(1) 0;
+  padding: golden-ratio(1em, 2) 0;
   border-top: 1px solid $secondary;
   overflow: hidden;
   @include screen(large) {
-    margin-top: modular-scale(2);
+    margin-top: golden-ratio(1em, 2);
   }
 
   @include screen(big) {
-    margin-top: modular-scale(4);
-    padding: modular-scale(3) 0 modular-scale(4);
+    margin-top: golden-ratio(1em, 4);
+    padding: golden-ratio(1em, 3) 0 golden-ratio(1em, 4);
   }
 }
 
@@ -333,7 +358,7 @@ body {
   }
 
   li {
-    margin-bottom: .5em;
+    margin-bottom: 1em;
   }
 }
 
@@ -348,5 +373,5 @@ body {
 }
 
 .gintouch {
-  padding-top: modular-scale(2);
+  padding-top: golden-ratio(1em, 2);
 }

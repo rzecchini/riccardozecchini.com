@@ -17,24 +17,26 @@ a {
     color: $accent;
   }
   &:hover {
-    color: lighten($accent, 8);
+    color: lighten($accent, 20);
   }
   @include transition(all 0.2s ease-in-out);
 }
 
-.secondary {
-  color: lighten($bl, 50);
+.arrow {
+  //font-size: 1.25em;
+  //line-height: .75em;
+  //color: $accent
 }
 
-.arrow {
-  color: $accent;
+.secondary {
+  color: lighten($color, 50);
 }
 
 body {
-  font: normal 1em/1.5 "QuestaSans", "Lucida Grande", "Arial", sans-serif;
-  color: $bl;
+  font: normal 1em/1.4 "QuestaSans", "Lucida Grande", "Arial", sans-serif;
+  color: $color;
   @include screen(medium) {
-    //font-size: 1.25em;
+    font-size: 1.25em;
   }
 }
 
@@ -43,7 +45,6 @@ body {
   text-transform: uppercase;
   a {
     border-bottom: none;
- 
   }
 }
 
@@ -61,7 +62,6 @@ body {
 }
 
 .profile-page {
-  color: $wh;
   .nav__profile {
     text-align: center;
   }
@@ -70,9 +70,10 @@ body {
   }
 }
 
+.nav__contact,
 .nav__profile,
 .nav__work {
-  color: darken($main, 20);
+  color: $secondary;
 }
 
 .gintouch {
@@ -95,26 +96,25 @@ body {
 .me__introduce {
   text-align: center;
   //font-size: 1em;
-  color: $wh;
+  color: $bg;
 }
 
 // Project List INDEX
 
 .project-list {
   a {
-    //border-bottom: none;
- 
+    border-bottom: none;
   }
 }
 
 .project__title {
   text-align: center;
-  //text-transform: uppercase;
+  text-transform: uppercase;
 }
 
 .project__type {
   text-align: center;
-  color: $wh;
+  color: $bg;
 }
 
 // Project Content
@@ -123,18 +123,16 @@ body {
   font-family: $serif;
   p {
     font-size: modular-scale(1);
-    @include screen(large) {
-      font-size: modular-scale(1);
-    }
+    @include screen(large) {font-size: modular-scale(1)}
   }
   figcaption {
-    color: lighten($bl, 40);
+    color: lighten($color, 40);
     font-family: $sans;
   }
 }
 
 .pc__title {
-  color: $wh;
+  color: $bg;
   line-height: 1.2;
   font-size: modular-scale(2);
   font-family: $grande;
@@ -145,9 +143,9 @@ body {
 }
 
 .pc__tags {
-  color: $wh;
+  color: $bg;
   text-align: center;
-  //text-transform: uppercase;
+  text-transform: uppercase;
   font-size: modular-scale(-1);
   font-family: $sans;
 }
@@ -155,10 +153,9 @@ body {
 .project-nav {
   font-size: 1em;
   font-family: $sans;
-  //text-transform: uppercase;
+  text-transform: uppercase;
   a {
-    //border-bottom: none;
- 
+    border-bottom: none;
   }
 }
 
@@ -168,17 +165,21 @@ body {
   text-align: center;
 }
 
+//.pn--t__section {
+//  text-align: center;
+//}
+
 .pn--t__title {
   margin-top: .5em;
-  //text-transform: uppercase;
+  text-transform: uppercase;
   font-size: .75em;
   text-align: center;
 }
 
 .pnav--l, .pnav--r {
   //font-size: 1em;
-  //text-transform: uppercase;
-  //border-bottom: none;
+  text-transform: uppercase;
+  border-bottom: none;
 }
 
 // Profile
@@ -192,9 +193,7 @@ body {
 .profile-about {
   font-family: $serif;
   font-size: modular-scale(1);
-  @include screen(large) {
-    font-size: modular-scale(1);
-  }
+  @include screen(large) {font-size: modular-scale(1)}
 }
 
 .profile-cv {
@@ -202,8 +201,7 @@ body {
   font-size: modular-scale(-1);
   text-align: center;
   a {
-    //border-bottom: none;
-    //text-transform: uppercase;
- 
+    border-bottom: none;
+    text-transform: uppercase;
   }
 }
