@@ -1,0 +1,402 @@
+#instantclick-bar {
+  background: $accent;
+}
+
+// Scrollbar
+html {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+/*body::-webkit-scrollbar {
+	width: 8px;
+}
+
+body::-webkit-scrollbar-track {
+	-webkit-border-radius: 0;
+	//-webkit-box-shadow: inset 0 0 1px rgba(0, 0, 0, 0.3);
+	background-color: $hover;
+}
+
+body::-webkit-scrollbar-thumb {
+	-webkit-border-radius: 0;
+	background-color: $accent;
+}*/
+
+// Global
+
+.index-page {
+  background: $hover;
+}
+
+.profile-page {
+  background: $hover;
+  color: $bg;
+}
+
+body {
+  background: desaturate(lighten($hover, 68), 100);
+}
+
+.container {
+  overflow: hidden;
+  margin: 0 1.5em;
+  @include screen(medium) {
+    margin: 0 4%;
+  }
+
+  @include screen(large) {
+    margin: 0 8%;
+  }
+
+  @include screen(big) {
+    margin: 0 auto;
+    max-width: 90%;
+  }
+}
+
+.header {
+  background: $hover;
+}
+
+.nav {
+  width: 100%;
+  padding: golden-ratio(1) 0;
+  margin: 0 auto;
+  overflow: hidden;
+  @include screen(large) {
+    padding: golden-ratio(2) 0;
+  }
+
+  li {
+    float: left;
+    width: 33%;
+  }
+}
+
+.nav__update {
+  text-align: right;
+  text-transform: none;
+  color: #FF5722;
+}
+
+.work-page .nav__update {
+  margin-left: 33%;
+}
+
+.selected-word {
+  display: none;
+  @include screen(large) {
+    display: inline-block;
+  }
+}
+
+.me {
+  margin: golden-ratio(4) 0;
+  @include screen(big) {
+    margin: golden-ratio(5) 0 golden-ratio(4);
+  }
+}
+
+.me__introduce {
+  margin-top: 1em;
+}
+
+// Nav IN PROFILE PAGE
+
+.profile-page {
+  .nav__profile {
+    margin-left: 33%;
+  }
+}
+
+//Project List
+
+.project-list {
+  overflow: hidden;
+  margin-top: golden-ratio(3);
+}
+
+.project {
+  padding-bottom: golden-ratio(4);
+  img {
+    margin: auto;
+    transition: all 0.2s linear;
+    &:hover {
+      opacity: .4;
+    }
+  }
+  &:nth-child(2n) {
+    @include screen(big) {
+      margin-right: 0;
+    }
+  }
+  @include screen(big) {
+    margin-right: 10%;
+    figure {
+      min-height: 480px;
+    }
+  }
+
+  @include screen(big) {
+    width: 45%;
+    float: left;
+  }
+}
+
+.project__title {
+  margin-top: golden-ratio(1);
+}
+
+.project__type {
+  margin-top: .25em;
+}
+
+// Project Content
+.project-intro-wrapp {
+  background: $hover;
+}
+
+.project-content {
+  padding: 1em 0;
+
+  p, figure, .fig {
+    margin: golden-ratio(-1) auto;
+    @include screen(large) {
+      margin: golden-ratio(1) auto;
+    }
+
+    @include screen(big) {
+      margin: golden-ratio(2) auto;
+    }
+  }
+  figcaption {
+    margin-top: golden-ratio(-1);
+    max-width: 20em;
+  }
+  figure {
+    max-width: 1000px;
+  }
+  p {
+    max-width: 22.5em;
+  }
+}
+
+.pc__title {
+  margin-bottom: .25em;
+}
+
+.pc__tags {
+  margin-bottom: golden-ratio(3);
+  @include screen(large) {
+    margin-bottom: golden-ratio(4);
+  }
+}
+
+/*.pc-fix {
+  @include screen(big) {
+    padding: 0 0 13em;
+  }
+}*/
+
+@include screen(big) {
+  .fig {
+    overflow: hidden;
+    max-width: 1000px;
+  }
+  .fig--left {
+    float: left;
+    width: 49%;
+    margin-right: 2%;
+  }
+  .fig--right {
+    float: right;
+    width: 49%;
+  }
+}
+
+@-webkit-keyframes fadeIn {
+  from {
+    bottom: -10em;
+  }
+  to {
+    bottom: 0.5em;
+  }
+}
+
+@-moz-keyframes fadeIn {
+  from {
+    bottom: -10em;
+  }
+  to {
+    bottom: 0.5em;
+  }
+}
+
+@-o-keyframes fadeIn {
+  from {
+    bottom: -10em;
+  }
+  to {
+    bottom: 0.5em;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    bottom: -10em;
+  }
+  to {
+    bottom: 0.5em;
+  }
+}
+
+
+.project-nav {
+  display: block;
+  position: fixed;
+  bottom: -10em;
+  left: .5em;
+  right: .5em;
+  padding: 1em 0;
+  margin: auto;
+  background: $bg;
+  border: 1px solid $secondary;
+  animation-name: slideUp;
+  animation-duration: 0.4s;
+  animation-delay: 1s;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
+  @include screen(big) {
+    display: none;
+  }
+}
+
+.pn__prev,
+.pn__all,
+.pn__next {
+  float: left;
+  width: 33.3333333%;
+}
+
+.project-nav--thumbs {
+  display: none;
+  @include screen(big) {
+    display: block;
+    overflow: hidden;
+    padding: golden-ratio(2);
+    //background: $bg;
+    li {
+      float: left;
+      width: 15%;
+      margin-right: 2%;
+      &:nth-child(6) {
+        margin-right: 0;
+      }
+    }
+    li.current {
+      opacity: .25;
+    }
+  }
+}
+
+//.pn--t__section {
+//	padding-top: modular-scale(1em, 2, $scale);
+//	margin-bottom: modular-scale(1em, 2, $scale);
+//}
+
+//.show {
+//	@include screen(huge) {
+//		opacity: 1 !important;
+//	}
+//}
+
+.pnav--l, .pnav--r {
+  display: none;
+  transition: all 0.4s linear;
+  @include screen(big) {
+    display: block;
+    opacity: 0;
+    position: fixed;
+    top: 50%;
+  }
+}
+
+.pnav--l {
+  left: 0;
+  transform: rotate(-90deg);
+  @include screen(huge) {
+    left: golden-ratio(1);
+  }
+}
+
+.pnav--r {
+  right: 0;
+  transform: rotate(90deg);
+  @include screen(huge) {
+    right: golden-ratio(1);
+  }
+}
+
+// Profile
+
+.profile {
+  padding: golden-ratio(2) 0 0;
+}
+
+.profile-about {
+  margin-top: golden-ratio(2);
+  p {
+    margin: golden-ratio(-1) auto;
+    max-width: 22.5em;
+  }
+}
+
+.profile-pic {
+  max-width: 1000px;
+  margin: 0 auto;
+  opacity: .9;
+  transition: all 0.2s ease-in-out;
+}
+
+.profile-cv {
+  padding: golden-ratio(1) 0;
+}
+
+// Footer
+
+.footer {
+  padding: golden-ratio(2) 0;
+  border-top: 1px solid $secondary;
+  overflow: hidden;
+  @include screen(large) {
+    margin-top: golden-ratio(2);
+  }
+}
+
+.footer__col {
+  width: 30%;
+  margin-right: 5%;
+  float: left;
+  @include screen(big) {
+    width: 25%;
+    margin-right: 0;
+  }
+
+  li {
+    margin-bottom: 1em;
+  }
+}
+
+.footer__col:nth-child(1) {
+  @include screen(big) {
+    margin-left: 25%;
+  }
+}
+
+.footer__col:nth-child(3) {
+  margin-right: 0;
+}
+
+.gintouch {
+  padding-top: golden-ratio(2);
+}

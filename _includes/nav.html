@@ -1,0 +1,37 @@
+<div class="header">
+	<div class="container">
+		<nav>
+			{% if nickname == 'profile' %}
+				<ul class="nav">
+					<li class="nav__profile">Profile</li>
+					<li class="nav__work">
+						<a href="/"><span class="selected-word">Selected</span> Works&emsp;<span class="arrow">&rarr;</span></a>
+					</li>
+				</ul>
+			{% elsif nickname == '' %}
+				<ul class="nav">
+					<li class="nav__profile">
+						<a href="/profile"><span class="arrow">&larr;</span>&emsp;Profile
+						</a>
+					</li>
+					<li class="nav__work">
+						<a href="/"></a><span class="selected-word">Selected</span> Works
+					</li>
+					<li class="nav__update">
+						Last update 2014
+					</li>
+				</ul>
+			{% else %}
+				<ul class="nav">
+					<li>
+						<a href="/"><span class="arrow">&larr;</span>&emsp;<span class="selected-word">Selected</span> Works
+						</a>
+					</li>
+					<li class="nav__update">
+						Last update 2014
+					</li>
+				</ul>
+			{% endif %}
+		</nav>
+	</div>
+</div>
