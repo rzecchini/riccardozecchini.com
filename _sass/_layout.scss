@@ -69,8 +69,18 @@ body {
 
   li {
     float: left;
-    width: 35%;
+    width: 33%;
   }
+}
+
+.nav__update {
+  text-align: right;
+  text-transform: none;
+  color: #FF5722;
+}
+
+.work-page .nav__update {
+  margin-left: 33%;
 }
 
 .selected-word {
