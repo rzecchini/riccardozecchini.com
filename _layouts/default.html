@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html class="no-js">
+
+{% include head.html %}
+
+<body {% if nickname == 'profile' %}class="profile-page"{% endif %}>
+    {% include nav.html %}
+
+    {% if nickname != 'profile' %} 
+        <div class="project-intro-wrapp">
+            <div class="project-content container" id="betfect-content">
+                <h1 class="pc__title">{{ page.title }}</h1>
+                <h3 class="pc__tags">{{ page.activity }}</h3>
+        
+                {% if page.cover %}
+                <figure class="project-intro__pic">
+                    <img src="{{ page.cover | relative_url }}" alt="{{ page.title }}">
+                </figure>
+                {% endif %}
+            </div>
+        </div>
+    {% endif %}
+
+    {{ content }}
+ 
+    {% if nickname != 'profile' %}
+        {% include nav-thumbs.html %}
+    {% endif %}
+
+    {% include footer.html %}
+
+</body>
+
+</html>

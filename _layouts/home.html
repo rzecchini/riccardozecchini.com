@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html class="no-js">
+
+{% include head.html %}
+
+<body class="index-page">
+    {% include nav.html %}
+    
+    <div class="container project-list">
+        {% assign works = site.pages | where: "work", true | sort: "index" %}
+        {% for work in works %}
+            <article class="project">
+                <a href="{{ work.url }}">
+                <figure>
+                    <img src="{{ work.poster }}" alt="{{ work.title }}">
+                </figure>
+                <h1 class="project__title">{{ work.title }}</h1>
+                </a>
+                <h2 class="project__type">{{ work.type }}</h2>
+            </article>
+        {% endfor %}
+    </div>
+    
+    {% include footer.html %}
+
+</body>
+
+</html>

@@ -1,8 +1,25 @@
-@include font-face(QuestaGrande, "../font/2-Questa_Grande_Regular-webfont");
 
-@include font-face(QuestaSans, "../font/2-Questa_Sans_Regular-webfont");
-
-@include font-face(Questa, "../font/2-Questa_Regular-webfont");
+@font-face {
+  font-family: "QuestaGrande";
+  src: url("../assets/font/2-Questa_Grande_Regular-webfont.woff2") format("woff2"),
+       url("../assets/font/2-Questa_Grande_Regular-webfont.woff") format("woff");
+  font-style: normal;
+  font-weight: 400;
+}
+@font-face {
+  font-family: "QuestaSans";
+  src: url("../assets/font/2-Questa_Sans_Regular-webfont.woff2") format("woff2"),
+       url("../assets/font/2-Questa_Sans_Regular-webfont.woff") format("woff");
+  font-style: normal;
+  font-weight: 400;
+}
+@font-face {
+  font-family: "Questa";
+  src: url("../assets/font/2-Questa_Regular-webfont.woff2") format("woff2"),
+       url("../assets/font/2-Questa_Regular-webfont.woff") format("woff");
+  font-style: normal;
+  font-weight: 400;
+}
 
 $grande: "QuestaGrande", "Questa", "Georgia", "Times New Roman", serif;
 $sans: "QuestaSans", "Lucida Grande", "Arial", sans-serif;
@@ -19,7 +36,7 @@ a {
   &:hover {
     color: lighten($accent, 20);
   }
-  @include transition(all 0.2s ease-in-out);
+  transition: all 0.2s ease-in-out;
 }
 
 .arrow {

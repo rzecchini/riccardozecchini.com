@@ -54,13 +54,17 @@ body {
   }
 }
 
+.header {
+  background: $hover;
+}
+
 .nav {
   width: 100%;
-  padding: golden-ratio(1em, 1) 0;
+  padding: golden-ratio(1) 0;
   margin: 0 auto;
   overflow: hidden;
   @include screen(large) {
-    padding: golden-ratio(1em, 2) 0;
+    padding: golden-ratio(2) 0;
   }
 
   li {
@@ -77,9 +81,9 @@ body {
 }
 
 .me {
-  margin: golden-ratio(1em, 4) 0;
+  margin: golden-ratio(4) 0;
   @include screen(big) {
-    margin: golden-ratio(1em, 5) 0 golden-ratio(1em, 4);
+    margin: golden-ratio(5) 0 golden-ratio(4);
   }
 }
 
@@ -99,14 +103,14 @@ body {
 
 .project-list {
   overflow: hidden;
-  margin-top: golden-ratio(1em, 3);
+  margin-top: golden-ratio(3);
 }
 
 .project {
-  padding-bottom: golden-ratio(1em, 4);
+  padding-bottom: golden-ratio(4);
   img {
     margin: auto;
-    @include transition(all 0.2s linear);
+    transition: all 0.2s linear;
     &:hover {
       opacity: .4;
     }
@@ -130,7 +134,7 @@ body {
 }
 
 .project__title {
-  margin-top: golden-ratio(1em, 1);
+  margin-top: golden-ratio(1);
 }
 
 .project__type {
@@ -144,25 +148,19 @@ body {
 
 .project-content {
   padding: 1em 0;
-  @include screen(medium) {
-    padding: golden-ratio(1em, 2) 0;
-  }
-  @include screen(big) {
-    padding: golden-ratio(1em, 4) 0;
-  }
 
   p, figure, .fig {
-    margin: golden-ratio(0.75em, 1) auto;
+    margin: golden-ratio(-1) auto;
     @include screen(large) {
-      margin: golden-ratio(1em, 1) auto;
+      margin: golden-ratio(1) auto;
     }
 
     @include screen(big) {
-      margin: golden-ratio(1em, 2) auto;
+      margin: golden-ratio(2) auto;
     }
   }
   figcaption {
-    margin-top: golden-ratio(1em, -1);
+    margin-top: golden-ratio(-1);
     max-width: 20em;
   }
   figure {
@@ -178,17 +176,17 @@ body {
 }
 
 .pc__tags {
-  margin-bottom: golden-ratio(1em, 3);
+  margin-bottom: golden-ratio(3);
   @include screen(large) {
-    margin-bottom: golden-ratio(1em, 4);
+    margin-bottom: golden-ratio(4);
   }
 }
 
-.pc-fix {
+/*.pc-fix {
   @include screen(big) {
     padding: 0 0 13em;
   }
-}
+}*/
 
 @include screen(big) {
   .fig {
@@ -206,8 +204,34 @@ body {
   }
 }
 
+@-webkit-keyframes fadeIn {
+  from {
+    bottom: -10em;
+  }
+  to {
+    bottom: 0.5em;
+  }
+}
 
-@include keyframes(slideUp) {
+@-moz-keyframes fadeIn {
+  from {
+    bottom: -10em;
+  }
+  to {
+    bottom: 0.5em;
+  }
+}
+
+@-o-keyframes fadeIn {
+  from {
+    bottom: -10em;
+  }
+  to {
+    bottom: 0.5em;
+  }
+}
+
+@keyframes fadeIn {
   from {
     bottom: -10em;
   }
@@ -227,11 +251,11 @@ body {
   margin: auto;
   background: $bg;
   border: 1px solid $secondary;
-  @include animation-name(slideUp);
-  @include animation-duration(0.4s);
-  @include animation-delay(1s);
-  @include animation-timing-function(ease-in-out);
-  @include animation-fill-mode(forwards);
+  animation-name: slideUp;
+  animation-duration: 0.4s;
+  animation-delay: 1s;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
   @include screen(big) {
     display: none;
   }
@@ -249,12 +273,8 @@ body {
   @include screen(big) {
     display: block;
     overflow: hidden;
-    padding: golden-ratio(1em, 2);
-    position: fixed;
-    left: 0;
-    bottom: -1000px;
-    right: 0;
-    background: $bg;
+    padding: golden-ratio(2);
+    //background: $bg;
     li {
       float: left;
       width: 15%;
@@ -282,7 +302,7 @@ body {
 
 .pnav--l, .pnav--r {
   display: none;
-  @include transition(all 0.4s linear);
+  transition: all 0.4s linear;
   @include screen(big) {
     display: block;
     opacity: 0;
@@ -293,30 +313,30 @@ body {
 
 .pnav--l {
   left: 0;
-  @include transform(rotate(-90deg));
+  transform: rotate(-90deg);
   @include screen(huge) {
-    left: golden-ratio(1em, 1);
+    left: golden-ratio(1);
   }
 }
 
 .pnav--r {
   right: 0;
-  @include transform(rotate(90deg));
+  transform: rotate(90deg);
   @include screen(huge) {
-    right: golden-ratio(1em, 1);
+    right: golden-ratio(1);
   }
 }
 
 // Profile
 
 .profile {
-  padding: golden-ratio(1em, 2) 0 0;
+  padding: golden-ratio(2) 0 0;
 }
 
 .profile-about {
-  margin-top: golden-ratio(1em, 2);
+  margin-top: golden-ratio(2);
   p {
-    margin: golden-ratio(0.75em, 1) auto;
+    margin: golden-ratio(-1) auto;
     max-width: 22.5em;
   }
 }
@@ -325,26 +345,21 @@ body {
   max-width: 1000px;
   margin: 0 auto;
   opacity: .9;
-  @include transition(all 0.2s ease-in-out);
+  transition: all 0.2s ease-in-out;
 }
 
 .profile-cv {
-  padding: golden-ratio(1em, 1) 0;
+  padding: golden-ratio(1) 0;
 }
 
 // Footer
 
 .footer {
-  padding: golden-ratio(1em, 2) 0;
+  padding: golden-ratio(2) 0;
   border-top: 1px solid $secondary;
   overflow: hidden;
   @include screen(large) {
-    margin-top: golden-ratio(1em, 2);
-  }
-
-  @include screen(big) {
-    margin-top: golden-ratio(1em, 4);
-    padding: golden-ratio(1em, 3) 0 golden-ratio(1em, 4);
+    margin-top: golden-ratio(2);
   }
 }
 
@@ -373,5 +388,5 @@ body {
 }
 
 .gintouch {
-  padding-top: golden-ratio(1em, 2);
+  padding-top: golden-ratio(2);
 }
