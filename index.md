@@ -1,5 +1,5 @@
 ---
-title: Home
+title: Selected works
 layout: home
 ---
 

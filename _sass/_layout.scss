@@ -247,28 +247,12 @@
 }
 
 .footer__col {
-    width: 30%;
-    margin-right: 5%;
+    width: 33%;
     float: left;
-    @include screen(big) {
-        width: 25%;
+    &:last-child {
         margin-right: 0;
     }
     li {
         margin-bottom: 1em;
     }
-}
-
-.footer__col:nth-child(1) {
-    @include screen(big) {
-        margin-left: 25%;
-    }
-}
-
-.footer__col:nth-child(3) {
-    margin-right: 0;
-}
-
-.gintouch {
-    padding-top: golden-ratio(2);
 }
