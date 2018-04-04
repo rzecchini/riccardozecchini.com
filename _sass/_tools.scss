@@ -1,30 +1,3 @@
-// Scaling Variables
-$golden:           1.618;
-$minor-second:     1.067;
-$major-second:     1.125;
-$minor-third:      1.2;
-$major-third:      1.25;
-$perfect-fourth:   1.333;
-$augmented-fourth: 1.414;
-$perfect-fifth:    1.5;
-$minor-sixth:      1.6;
-$major-sixth:      1.667;
-$minor-seventh:    1.778;
-$major-seventh:    1.875;
-$octave:           2;
-$major-tenth:      2.5;
-$major-eleventh:   2.667;
-$major-twelfth:    3;
-$double-octave:    4;
-
-//$user-output-deprecation-warnings-setting: $output-bourbon-deprecation-warnings;
-//$output-bourbon-deprecation-warnings: false;
-
-$modular-scale-ratio: $perfect-fourth !default;
-$modular-scale-base: 1em !default;
-
-//$output-bourbon-deprecation-warnings: $user-output-deprecation-warnings-setting;
-
 @function modular-scale($increment, $value: $modular-scale-base, $ratio: $modular-scale-ratio) {
   $v1: nth($value, 1);
   $v2: nth($value, length($value));
@@ -75,4 +48,27 @@ $modular-scale-base: 1em !default;
 
 @function golden-ratio($increment) {
   @return modular-scale($increment, 1em, 1.618)
+}
+
+@mixin screen($media) {
+  @if $media == medium {
+    @media screen and (min-width: $breakp1) {
+      @content;
+    }
+  }
+  @else if $media == large {
+    @media screen and (min-width: $breakp2) {
+      @content;
+    }
+  }
+  @else if $media == big {
+    @media screen and (min-width: $breakp3) {
+      @content;
+    }
+  }
+  @else if $media == huge {
+    @media screen and (min-width: $breakp4) {
+      @content;
+    }
+  }
 }
