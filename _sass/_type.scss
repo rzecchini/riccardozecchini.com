@@ -128,7 +128,7 @@
 .nav-thumbs__title {
   margin-top: .5em;
   text-transform: uppercase;
-  font-size: modular-scale(-2);
+  font-size: modular-scale(-1);
   text-align: center;
 }
 
@@ -144,15 +144,5 @@
   font-size: modular-scale(1);
   @include screen(large) {
     font-size: modular-scale(1)
-  }
-}
-
-.profile-cv {
-  font-family: $sans;
-  font-size: modular-scale(-1);
-  text-align: center;
-  a {
-    border-bottom: none;
-    text-transform: uppercase;
   }
 }
