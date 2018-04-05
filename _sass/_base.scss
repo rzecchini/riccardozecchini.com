@@ -11,8 +11,8 @@ html {
 }
 
 body {
-    background: desaturate(lighten($hover, 68), 100);
-    color: $color;
+    background: $hover;
+    color: $bg;
     font: normal 1em/1.4 $sans;
     @include screen(medium) {
         font-size: 1.25em;

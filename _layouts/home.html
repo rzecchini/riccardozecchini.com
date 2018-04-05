@@ -3,8 +3,8 @@
 
 {% include head.html %}
 
-<body class="index-page">
-    {% include nav.html %}
+<body>
+    {% include header.html %}
     
     <div class="container project-list">
         {% assign works = site.pages | where: "work", true | sort: "index" %}

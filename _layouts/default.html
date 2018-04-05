@@ -4,13 +4,13 @@
 {% include head.html %}
 
 <body class="{% if nickname == 'profile' %}profile-page{% else %}work-page{% endif %}">
-    {% include nav.html %}
+    {% include header.html %}
 
     {% if nickname != 'profile' %} 
         <div class="project-intro-wrapp">
             <div class="project-content container" id="betfect-content">
-                <h1 class="pc__title">{{ page.title }}</h1>
-                <h3 class="pc__tags">{{ page.activity }}</h3>
+                <h1 class="project-content__title">{{ page.title }}</h1>
+                <h3 class="project-content__tags">{{ page.activity }}</h3>
         
                 {% if page.cover %}
                 <figure class="project-intro__pic">
@@ -24,7 +24,7 @@
     {{ content }}
  
     {% if nickname != 'profile' %}
-        {% include nav-thumbs.html %}
+        {% include thumbs.html %}
     {% endif %}
 
     {% include footer.html %}
