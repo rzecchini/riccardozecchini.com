@@ -133,7 +133,8 @@
 }
 
 .project-content {
-    padding: 1em 0;
+    padding: golden-ratio(1) 0;
+    font-family: $serif;
     p,
     figure,
     .fig {
