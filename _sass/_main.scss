@@ -313,6 +313,12 @@
     li {
         margin-bottom: 1em;
     }
+    @include screen(large) {
+        width: 25%;
+        &:first-child {
+            margin-left: 25%;
+        }
+    }
 }
 
 ///
