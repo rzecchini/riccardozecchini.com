@@ -116,19 +116,14 @@
 }
 
 ///
-//  Project Content
+//  Project Cover
 //
-.project-page {
-    background: $white;
-    color: $darkgrey;
-}
-
-.project-intro {
+.project-cover {
     padding: modular-scale(1) 0 modular-scale(2);
     background: $primary;
 }
 
-.project-intro__title {
+.project-cover__title {
     margin-bottom: .25em;
     color: $white;
     line-height: 1.2;
@@ -140,7 +135,7 @@
     }
 }
 
-.project-intro__tags {
+.project-cover__tags {
     margin-bottom: modular-scale(3);
     color: $white;
     text-align: center;
@@ -157,6 +152,8 @@
 //  Content
 //
 .content {
+    background: $white;
+    color: $darkgrey;
     font-family: $serif;
     p,
     figure,
@@ -209,7 +206,7 @@
 //
 .thumbs {
     padding: modular-scale(1) 0;
-    background: $secondary; 
+    background: $white; 
     &:before,
     &:after {
         content: ' ';

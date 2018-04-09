@@ -7,13 +7,13 @@
     {% include header.html %}
 
     {% if nickname != 'profile' %} 
-        <div class="project-intro">
+        <div class="project-cover">
             <div class="container">
-                <h1 class="project-intro__title">{{ page.title }}</h1>
-                <h3 class="project-intro__tags">{{ page.activity }}</h3>
+                <h1 class="project-cover__title">{{ page.title }}</h1>
+                <h3 class="project-cover__tags">{{ page.activity }}</h3>
         
                 {% if page.cover %}
-                <figure class="project-intro__pic">
+                <figure class="project-cover__pic">
                     <img src="{{ page.cover | relative_url }}" alt="{{ page.title }}">
                 </figure>
                 {% endif %}
