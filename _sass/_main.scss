@@ -21,57 +21,50 @@
 // Header
 //
 .header {
+    padding: modular-scale(1) 0;
     background: $primary;
+    color: $white;
+    @include screen(large) {
+        padding: modular-scale(2) 0;
+    }
 }
 
 .nav {
     width: 100%;
-    padding: modular-scale(1) 0;
     margin: 0 auto;
     font-size: modular-scale(0);
     text-transform: uppercase;
     overflow: hidden;
-    @include screen(large) {
-        padding: modular-scale(2) 0;
-    }
     li {
         float: left;
         width: 33%;
+        min-height: 1px;
+        &:nth-child(2) {
+            text-align: center;
+        }
+        &:last-child {
+            text-align: right;
+        }
+        &.last-update {
+            text-align: right;
+            text-transform: none;
+            color: #FF5722;
+        }
     }
     a {
         border-bottom: none;
     }
 }
 
-.nav__last-update {
-    text-align: right;
-    text-transform: none;
-    color: #FF5722;
-}
-
-.nav__center {
-    text-align: center;
-}
-.nav__right {
-    text-align: right;
-}
-
-// nav-title in profile page
-.profile-page .nav__center {
-    margin-left: 33%;
-}
-
-// nav last-update in work page
-.project-page .nav__right {
-    margin-left: 33%;
-}
 
 ///
 // Project List (home)
 //
 .project-list {
+    padding-top: modular-scale(3);
+    background: $primary;
+    color: $white;
     overflow: hidden;
-    margin-top: modular-scale(3);
     a {
         border-bottom: none;
     }
@@ -184,6 +177,11 @@
     }
 }
 
+.content--profile {
+    background: $primary;
+    color: $white;
+}
+
 // content figures
 @include screen(big) {
     .fig {
@@ -265,11 +263,8 @@
 //
 .footer {
     padding: modular-scale(2) 0;
-    //border-top: 1px solid $secondary;
+    background: $primary;
     overflow: hidden;
-    @include screen(large) {
-        margin-top: modular-scale(2);
-    }
 }
 
 .footer__col {
@@ -292,11 +287,6 @@
 ///
 // Utils
 //
-.bg-blue { 
-    background: $primary;
-    color: $white;
-}
-
 .color-secondary {
     color: lighten($darkgrey, 50);
 }

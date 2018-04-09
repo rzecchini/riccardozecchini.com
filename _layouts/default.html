@@ -3,7 +3,7 @@
 
 {% include head.html %}
 
-<body class="{% if nickname == 'profile' %}profile-page{% else %}project-page{% endif %}">
+<body>
     {% include header.html %}
 
     {% if nickname != 'profile' %} 
@@ -21,7 +21,7 @@
         </div>
     {% endif %}
 
-    <div class="content">
+    <div class="content{% if nickname == 'profile' %} content--profile{% endif %}">
         <div class="container">
             {{ content }}
         </div>

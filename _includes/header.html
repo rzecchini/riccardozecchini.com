@@ -3,31 +3,33 @@
 		<nav>
 			{% if nickname == 'profile' %}
 				<ul class="nav">
-					<li class="nav__center">Profile</li>
-					<li class="nav__right">
+					<li></li>
+					<li>Profile</li>
+					<li>
 						<a href="/"><span class="show--large">Selected</span> Works&emsp;<span>&rarr;</span></a>
 					</li>
 				</ul>
 			{% elsif nickname == '' %}
 				<ul class="nav">
-					<li class="nav__left">
+					<li>
 						<a href="/profile"><span>&larr;</span>&emsp;Profile
 						</a>
 					</li>
-					<li class="nav__center">
+					<li>
 						<a href="/"></a><span class="show--large">Selected</span> Works
 					</li>
-					<li class="nav__right nav__last-update">
+					<li class="last-update">
 						Last update 2014
 					</li>
 				</ul>
 			{% else %}
 				<ul class="nav">
-					<li class="nav__left">
+					<li >
 						<a href="/"><span>&larr;</span>&emsp;<span class="show--large">Selected</span> Works
 						</a>
 					</li>
-					<li class="nav__right nav__last-update">
+					<li></li>
+					<li class="last-update">
 						Last update 2014
 					</li>
 				</ul>
