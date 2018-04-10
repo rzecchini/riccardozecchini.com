@@ -13,7 +13,7 @@
     }
     @include screen(big) {
         margin: 0 auto;
-        max-width: 90%;
+        max-width: 1000px;
     }
 }
 
@@ -165,9 +165,9 @@
         color: lighten($darkgrey, 40);
         font-family: $sans;
     }
-    figure {
-        max-width: 1000px;
-    }
+    // figure {
+    //     max-width: 1000px;
+    // }
     p {
         max-width: 22.5em;
         font-size: modular-scale(1);
@@ -296,4 +296,30 @@
     @include screen(large) {
         display: inline-block;
     }
+}
+
+.fluid-video {
+    height: calc(100vw * 300 / 500);
+    max-height: calc(1000px * 300 / 500);
+    width: 100%;
+    max-width: 1000px;
+}
+
+.fluid-video--500x280 {
+    height: calc(100vw * 280 / 500);
+    max-height: calc(1000px * 280 / 500);
+}
+
+.fluid-video--500x310 {
+    height: calc(100vw * 310 / 500);
+    max-height: calc(1000px * 310 / 500);
+}
+
+.fluid-video--500x360 {
+    height: calc(100vw * 360 / 500);
+    max-height: calc(1000px * 360 / 500);
+}
+.fluid-video--600x380 {
+    height: calc(100vw * 380 / 600);
+    max-height: calc(1000px * 360 / 500);
 }
