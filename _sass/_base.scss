@@ -19,9 +19,9 @@ body {
 }
 
 a {
-  padding-bottom: 2px;
+  padding-bottom: 0.25rem;
   text-decoration: none;
-  border-bottom: 2px solid $primary;
+  border-bottom: 0.25rem solid $primary;
   color: $black;
   //   &:visited,
   //   &:active {
@@ -40,7 +40,7 @@ img {
 }
 
 hr {
-  border: 2px solid $secondary;
+  border: 0.125rem solid $secondary;
 }
 
 strong {
@@ -48,7 +48,7 @@ strong {
 }
 
 td {
-  min-width: 100px;
+  min-width: 6.25rem;
 }
 
 ul {
