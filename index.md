@@ -1,5 +1,5 @@
 ---
 title: Selected works
-layout: home
+layout: 2020
 ---
 
