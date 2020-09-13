@@ -26,16 +26,30 @@
 
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+  <!-- Primary Meta Tags -->
   <title>{{ page.title }}{% if page.title %} | {% endif %}{{ site.title }}</title>
-  <meta name="description" content="Riccardo Zecchini is a multidisciplinary designer, his works mainly shifts between information architecture, modular design and human-computer interaction.">
+  <meta name="title" content="{{ page.title }}{% if page.title %} | {% endif %}{{ site.title }}">
+  <meta name="description" content="{{ site.description }}">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.riccardozecchini.com/">
+  <meta property="og:title" content="{{ page.title }}{% if page.title %} | {% endif %}{{ site.title }}">
+  <meta property="og:description" content="{{ site.description }}">
+  <meta property="og:image" content="{{ 'img/rzecchini_meta_image.png' | relative_url}}">
+
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:url" content="https://www.riccardozecchini.com/">
+  <meta property="twitter:title" content="{{ page.title }}{% if page.title %} | {% endif %}{{ site.title }}">
+  <meta property="twitter:description" content="{{ site.description }}">
+  <meta property="twitter:image" content="{{ 'img/rzecchini_meta_image.png' | relative_url}}">
 
   <link rel="stylesheet" href="{{ 'style.css' | relative_url }}">
 
-  <!--[if lt IE 9]>
-      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-      <script>window.html5 || document.write('<script src="js/vendor/html5shiv.js"><\/script>')</script>
-  <![endif]-->
+  <!--[if lt IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js" type="text/javascript"></script><![endif]-->
 </head>
 
 {% assign nickname = page.url | remove: '/' %}
