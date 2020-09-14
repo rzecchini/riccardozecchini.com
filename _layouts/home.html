@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html class="no-js">
+<html lang="en">
 
 {% include head.html %}
 
 <body>
     {% include header.html %}
-    
+
     <div class="project-list">
         <div class="container">
             {% assign works = site.pages | where: "work", true | sort: "index" %}
@@ -22,7 +22,7 @@
             {% endfor %}
         </div>
     </div>
-    
+
     {% include footer.html %}
 
 </body>

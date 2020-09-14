@@ -1,17 +1,17 @@
 <!DOCTYPE html>
-<html class="no-js">
+<html lang="en">
 
 {% include head.html %}
 
 <body>
     {% include header.html %}
 
-    {% if nickname != 'profile' %} 
+    {% if nickname != 'profile' %}
         <div class="project-cover">
             <div class="container">
                 <h1 class="project-cover__title">{{ page.title }}</h1>
                 <h3 class="project-cover__tags">{{ page.activity }}</h3>
-        
+
                 {% if page.cover %}
                 <figure class="project-cover__pic">
                     <img src="{{ page.cover | relative_url }}" alt="{{ page.title }}">
@@ -26,7 +26,7 @@
             {{ content }}
         </div>
     </div>
- 
+
     {% if nickname != 'profile' %}
         {% include thumbs.html %}
     {% endif %}
