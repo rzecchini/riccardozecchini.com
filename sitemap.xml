@@ -7,10 +7,10 @@ layout: null
     <loc>{{ site.url }}{{ site.baseurl }}</loc>
   </url>
   {% for page in site.pages %}
-  {% if page.title %}
-  <url>
-    <loc>{{ site.url }}{{ site.baseurl }}{{ page.url }}</loc>
-  </url>
-  {% endif %}
+    {% if page.title and page.noindex != true %}
+    <url>
+      <loc>{{ site.url }}{{ site.baseurl }}{{ page.url }}</loc>
+    </url>
+    {% endif %}
   {% endfor %}
 </urlset>

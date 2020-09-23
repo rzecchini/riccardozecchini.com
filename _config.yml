@@ -1,5 +1,5 @@
-title: Riccardo Zecchini – Designer, passionate about mountains
-description: I’m Riccardo Zecchini a designer shaping interactive digital products.
+title: Riccardo Zecchini – Designer, climbing and outdoor lover
+description: Hi there, I’m Riccardo. User Experience specialist and front-end designer.
 baseurl: ""
 url: "https://www.riccardozecchini.com"
 
@@ -17,16 +17,3 @@ exclude:
   - vendor/cache/
   - vendor/gems/
   - vendor/ruby/
-
-# Include
-include: ["_pages"]
-
-# Defaults
-defaults:
-  -
-    scope:
-      path: "_pages"
-      type: "pages"
-    values:
-      layout: "default"
-      permalink: /:basename/

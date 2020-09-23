@@ -4,34 +4,9 @@
 {% include head.html %}
 
 <body>
-    {% include header.html %}
 
-    {% if nickname != 'profile' %}
-        <div class="project-cover">
-            <div class="container">
-                <h1 class="project-cover__title">{{ page.title }}</h1>
-                <h3 class="project-cover__tags">{{ page.activity }}</h3>
+    {{ content }}
 
-                {% if page.cover %}
-                <figure class="project-cover__pic">
-                    <img src="{{ page.cover | relative_url }}" alt="{{ page.title }}">
-                </figure>
-                {% endif %}
-            </div>
-        </div>
-    {% endif %}
-
-    <div class="content{% if nickname == 'profile' %} content--profile{% endif %}">
-        <div class="container">
-            {{ content }}
-        </div>
-    </div>
-
-    {% if nickname != 'profile' %}
-        {% include thumbs.html %}
-    {% endif %}
-
-    {% include footer.html %}
 </body>
 
 </html>
